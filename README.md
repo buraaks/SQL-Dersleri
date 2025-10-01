@@ -43,6 +43,55 @@
 
 ---
 
+## 📝 Örnek SQL Komutları
+
+---
+
+###  SELECT – Veri Sorgulama
+```sql
+SELECT FirstName, LastName 
+FROM Employees 
+WHERE Department = 'IT';
+```
+- Employees tablosundan sadece IT departmanındaki çalışanların ad ve soyadlarını listeler.
+ 
+ ---
+
+### INSERT INTO – Veri Ekleme
+```sql
+INSERT INTO Employees (FirstName, LastName, Department, HireDate)
+VALUES ('Ahmet', 'Yılmaz', 'IT', '2025-10-01');
+```
+- Employees tablosuna yeni bir çalışan kaydı ekler.
+ 
+---
+### UPDATE – Veri Güncelleme
+```sql
+UPDATE Employees
+SET Department = 'HR'
+WHERE EmployeeID = 5;
+```
+- EmployeeID değeri 5 olan çalışanın departmanını HR olarak günceller.
+
+---
+### DELETE – Veri Silme
+```sql
+DELETE FROM Employees
+WHERE Department = 'Stajyer';
+```
+- Stajyer departmanındaki tüm kayıtları siler.
+ 
+---
+### INNER JOIN – Tabloları Birleştirme
+```sql
+SELECT e.FirstName, e.LastName, d.DepartmentName
+FROM Employees e
+INNER JOIN Departments d ON e.DepartmentID = d.DepartmentID;
+```
+- Employees ve Departments tablolarını birleştirerek çalışanların hangi departmanda olduğunu gösterir.
+
+---
+
 ##  Kaynak
 👉 [Kusha Mühendislik Yazılım – SQL Dersleri Oynatma Listesi](https://www.youtube.com/playlist?list=PLW1Q9KyCBcbRuKW77t5McRJHyITU85VaA)
 
